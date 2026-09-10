@@ -1,0 +1,38 @@
+{
+  "companyName": "TechVanguard Solucoes Digitais",
+  "description": "Consultoria e desenvolvimento de software especializado em IA e automacao de processos para medias e grandes empresas.",
+  "location": "Avenida Paulista, 1000, Bela Vista, Sao Paulo - SP, CEP 01310-100",
+  "businessHours": "Segunda a Sexta-feira, das 09:00 as 18:00. Nao funcionamos aos finais de semana.",
+  "contacts": {
+    "email": "contato@techvanguard.com.br",
+    "whatsappHuman": "+5511999998888"
+  },
+  "productsAndServices": [
+    {
+      "name": "Desenvolvimento de Chatbots Avancados",
+      "price": "A partir de R$ 5.000,00 setup fixo + mensalidade adaptavel",
+      "description": "Criacao de agentes virtuais inteligentes integrados com LLMs e sistemas internos."
+    },
+    {
+      "name": "Consultoria de Arquitetura Cloud e IA",
+      "price": "R$ 350,00 por hora de mentoria/trabalho",
+      "description": "Analise de infraestrutura e desenho de solucoes escalaveis em nuvem."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Qual o prazo medio de entrega de um chatbot?",
+      "answer": "O prazo medio para um MVP funcional e homologado varia entre 15 a 30 dias uteis."
+    },
+    {
+      "question": "Voces emitem nota fiscal?",
+      "answer": "Sim, emitimos nota fiscal de prestacao de servicos para todas as contas corporativas."
+    }
+  ],
+  "policies": {
+    "guarantee": "Oferecemos 90 dias de suporte e garantia tecnica integral contra bugs apos a implantacao do sistema em ambiente producao."
+  },
+  "rules": {
+    "humanEscalationTrigger": "Sempre que o usuario solicitar falar com um atendente, humano, suporte tecnico complexo, ou se demonstrar forte descontentamento."
+  }
+}
