@@ -2,10 +2,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const requiredEnvs = [
-  'WHATSAPP_VERIFY_TOKEN',
-  'WHATSAPP_ACCESS_TOKEN',
-  'WHATSAPP_APP_SECRET',
-  'PHONE_NUMBER_ID',
+  'TWILIO_ACCOUNT_SID',
+  'TWILIO_AUTH_TOKEN',
+  'TWILIO_WHATSAPP_NUMBER',
   'GEMINI_API_KEY'
 ];
 
@@ -19,12 +18,10 @@ if (missingEnvs.length > 0) {
 module.exports = {
   PORT: process.env.PORT || 3000,
   NODE_ENV: process.env.NODE_ENV || 'development',
-  whatsapp: {
-    verifyToken: process.env.WHATSAPP_VERIFY_TOKEN,
-    accessToken: process.env.WHATSAPP_ACCESS_TOKEN,
-    appSecret: process.env.WHATSAPP_APP_SECRET,
-    phoneNumberId: process.env.PHONE_NUMBER_ID,
-    apiVersion: process.env.WHATSAPP_API_VERSION || 'v23.0'
+  twilio: {
+    accountSid: process.env.TWILIO_ACCOUNT_SID,
+    authToken: process.env.TWILIO_AUTH_TOKEN,
+    whatsappNumber: process.env.TWILIO_WHATSAPP_NUMBER
   },
   gemini: {
     apiKey: process.env.GEMINI_API_KEY,

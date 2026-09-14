@@ -1,33 +1,33 @@
-const crypto = require('crypto');
+const twilio = require('twilio');
 const env = require('../config/environment');
 
-function verifyMetaSignature(req, res, next) {
-  const signatureHeader = req.get('x-hub-signature-256');
+function verifyTwilioSignature(req, res, next) {
+  const twilioSignature = req.get('X-Twilio-Signature');
 
-  if (!signatureHeader || !req.rawBody) {
+  if (env.NODE_ENV === 'development') {
+    return next();
+  }
+
+  if (!twilioSignature) {
     return res.sendStatus(401);
   }
 
-  const expectedSignature =
-    'sha256=' +
-    crypto
-      .createHmac('sha256', env.whatsapp.appSecret)
-      .update(req.rawBody)
-      .digest('hex');
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+  const fullUrl = `${protocol}://${req.get('host')}${req.originalUrl}`;
 
-  const receivedBuffer = Buffer.from(signatureHeader);
-  const expectedBuffer = Buffer.from(expectedSignature);
-
-  const isValid =
-    receivedBuffer.length === expectedBuffer.length &&
-    crypto.timingSafeEqual(receivedBuffer, expectedBuffer);
+  const isValid = twilio.validateRequest(
+    env.twilio.authToken,
+    twilioSignature,
+    fullUrl,
+    req.body
+  );
 
   if (!isValid) {
-    console.warn('Assinatura invalida recebida no webhook. Requisicao rejeitada.');
+    console.warn('Assinatura invalida recebida no webhook Twilio. Requisicao rejeitada.');
     return res.sendStatus(401);
   }
 
   return next();
 }
 
-module.exports = { verifyMetaSignature };
+module.exports = { verifyTwilioSignature };

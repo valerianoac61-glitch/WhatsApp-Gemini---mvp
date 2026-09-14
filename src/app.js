@@ -9,13 +9,8 @@ const app = express();
 
 app.use(helmet());
 
-app.use(
-  express.json({
-    verify: (req, res, buf) => {
-      req.rawBody = buf;
-    }
-  })
-);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 const webhookLimiter = rateLimit({
   windowMs: 60 * 1000,

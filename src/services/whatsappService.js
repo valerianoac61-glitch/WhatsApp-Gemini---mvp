@@ -1,35 +1,23 @@
-const axios = require('axios');
+const twilio = require('twilio');
 const env = require('../config/environment');
+
+const client = twilio(env.twilio.accountSid, env.twilio.authToken);
 
 class WhatsappService {
   static async sendMessage(to, text) {
-    const url = `https://graph.facebook.com/${env.whatsapp.apiVersion}/${env.whatsapp.phoneNumberId}/messages`;
-
-    const payload = {
-      messaging_product: 'whatsapp',
-      recipient_type: 'individual',
-      to,
-      type: 'text',
-      text: {
-        preview_url: false,
-        body: text
-      }
-    };
+    const formattedTo = to.startsWith('whatsapp:') ? to : `whatsapp:${to}`;
 
     try {
-      const response = await axios.post(url, payload, {
-        headers: {
-          Authorization: `Bearer ${env.whatsapp.accessToken}`,
-          'Content-Type': 'application/json'
-        },
-        timeout: 10000
+      const message = await client.messages.create({
+        from: env.twilio.whatsappNumber,
+        to: formattedTo,
+        body: text
       });
-      console.log(`Mensagem enviada com sucesso para ${to}. ID: ${response.data?.messages?.[0]?.id}`);
-      return response.data;
+      console.log(`Mensagem enviada com sucesso para ${to}. SID: ${message.sid}`);
+      return message;
     } catch (error) {
-      const apiError = error.response ? JSON.stringify(error.response.data) : error.message;
-      console.error(`Erro ao enviar mensagem para o WhatsApp API. Detalhes: ${apiError}`);
-      throw new Error('Falha no envio de mensagem via WhatsApp API Cloud.');
+      console.error(`Erro ao enviar mensagem via Twilio. Detalhes: ${error.message}`);
+      throw new Error('Falha no envio de mensagem via Twilio WhatsApp API.');
     }
   }
 }
