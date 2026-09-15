@@ -18,6 +18,11 @@ async function startBot() {
     auth: state,
   });
 
+  if (!sock.authState.creds.registered) {
+    const code = await sock.requestPairingCode("244930666194");
+    console.log("CODIGO DE PAREAMENTO: " + code);
+  }
+
   sock.ev.on('creds.update', saveCreds);
 
   sock.ev.on('connection.update', (update) => {
