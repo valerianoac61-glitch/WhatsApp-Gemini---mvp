@@ -1,3 +1,7 @@
+const http = require('http');
+const PORT = process.env.PORT || 3000;
+http.createServer((req, res) => { res.writeHead(200); res.end('Bot esta a correr'); }).listen(PORT, () => console.log('Servidor HTTP na porta ' + PORT));
+
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys');
 const qrcode = require('qrcode-terminal');
 const conversationRepository = require('./repository/conversationRepository');
