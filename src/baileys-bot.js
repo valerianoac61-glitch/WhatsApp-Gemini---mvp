@@ -1,3 +1,4 @@
+
 const http = require('http');
 const PORT = process.env.PORT || 3000;
 http.createServer((req, res) => { res.writeHead(200); res.end('Bot esta a correr'); }).listen(PORT, () => console.log('Servidor HTTP na porta ' + PORT));
@@ -11,6 +12,8 @@ const googleSheetsService = require('./services/googleSheetsService');
 const GENERIC_FAILURE_MESSAGE =
   'Desculpe, tive um problema tecnico ao processar sua mensagem. Pode tentar novamente em instantes?';
 
+let pairingCodeRequested = false;
+
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState('baileys_auth');
 
@@ -18,9 +21,12 @@ async function startBot() {
     auth: state,
   });
 
-  if (!sock.authState.creds.registered) {
-    const code = await sock.requestPairingCode("244930666194");
-    console.log("CODIGO DE PAREAMENTO: " + code);
+  if (!sock.authState.creds.registered && !pairingCodeRequested) {
+    pairingCodeRequested = true;
+    setTimeout(async () => {
+      const code = await sock.requestPairingCode("244930666194");
+      console.log("CODIGO DE PAREAMENTO: " + code);
+    }, 3000);
   }
 
   sock.ev.on('creds.update', saveCreds);
@@ -37,6 +43,7 @@ async function startBot() {
       if (shouldReconnect) startBot();
     } else if (connection === 'open') {
       console.log('Bot conectado ao WhatsApp com sucesso!');
+      pairingCodeRequested = false;
     }
   });
 
