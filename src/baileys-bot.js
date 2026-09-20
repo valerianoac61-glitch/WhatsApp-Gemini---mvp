@@ -45,6 +45,7 @@ async function startBot() {
     if (!msg.message || msg.key.fromMe) return;
 
     const customerNumber = msg.key.remoteJid;
+    if (customerNumber.endsWith('@g.us') || customerNumber.endsWith('@newsletter') || customerNumber.endsWith('@broadcast')) return;
     const userTextRaw = msg.message.conversation || msg.message.extendedTextMessage?.text || '';
     const messageId = msg.key.id;
 
