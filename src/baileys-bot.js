@@ -75,6 +75,11 @@ async function startBot() {
       }
 
       const userText = userTextRaw.trim();
+      if (userText.toLowerCase() === 'reiniciar') {
+        conversationRepository.setStatus(customerNumber, 'AI_ACTIVE');
+        await sock.sendMessage(customerNumber, { text: 'Conversa reiniciada. Como posso ajudar?' });
+        return;
+      }
       if (!userText) return;
 
       console.log(`Mensagem recebida de [${customerNumber}]: "${userText}"`);
