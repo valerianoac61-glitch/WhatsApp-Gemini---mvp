@@ -10,7 +10,7 @@ const geminiService = require('./services/geminiService');
 const googleSheetsService = require('./services/googleSheetsService');
 
 const GENERIC_FAILURE_MESSAGE =
-  'Desculpe, tive um problema tecnico ao processar sua mensagem. Pode tentar novamente em instantes?';
+  'Desculpe, tive um problema tecnico ao processar sua mensagem. Pode tentar novamente em instantes? / Sorry, I had a technical issue processing your message. Could you please try again shortly?';
 
 let pairingCodeRequested = false;
 
