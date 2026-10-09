@@ -34,6 +34,25 @@ class GeminiService {
 
     return text.trim();
   }
+
+  static async transcribeAudio(audioBuffer, mimeType) {
+    const response = await ai.models.generateContent({
+      model: env.gemini.model,
+      contents: [
+        {
+          role: 'user',
+          parts: [
+            { inlineData: { mimeType: mimeType || 'audio/ogg', data: audioBuffer.toString('base64') } },
+            { text: 'Transcreva fielmente, no idioma original, o que a pessoa diz neste audio. Responda apenas com a transcricao, sem comentarios. Se nao houver fala compreensivel, responda apenas: [INAUDIVEL]' }
+          ]
+        }
+      ],
+      config: { temperature: 0, maxOutputTokens: 500 }
+    });
+    const text = (response?.text || '').trim();
+    if (!text || text.includes('[INAUDIVEL]')) return '';
+    return text;
+  }
 }
 
 module.exports = GeminiService;

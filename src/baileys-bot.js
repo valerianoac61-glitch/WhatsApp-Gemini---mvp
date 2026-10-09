@@ -3,7 +3,7 @@ const http = require('http');
 const PORT = process.env.PORT || 3000;
 http.createServer((req, res) => { res.writeHead(200); res.end('Bot esta a correr'); }).listen(PORT, () => console.log('Servidor HTTP na porta ' + PORT));
 
-const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys');
+const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, downloadMediaMessage } = require('@whiskeysockets/baileys');
 const qrcode = require('qrcode-terminal');
 const conversationRepository = require('./repository/conversationRepository');
 const geminiService = require('./services/geminiService');
@@ -53,7 +53,7 @@ async function startBot() {
 
     const customerNumber = msg.key.remoteJid;
     if (customerNumber.endsWith('@g.us') || customerNumber.endsWith('@newsletter') || customerNumber.endsWith('@broadcast')) return;
-    const userTextRaw = msg.message.conversation || msg.message.extendedTextMessage?.text || '';
+    let userTextRaw = msg.message.conversation || msg.message.extendedTextMessage?.text || '';
     const messageId = msg.key.id;
 
     try {
@@ -65,6 +65,22 @@ async function startBot() {
       }
       if (messageId) {
         conversationRepository.markMessageProcessed(customerNumber, messageId);
+      }
+
+      if (!userTextRaw && msg.message.audioMessage) {
+        try {
+          const audioBuffer = await downloadMediaMessage(msg, 'buffer', {}, { reuploadRequest: sock.updateMediaMessage });
+          const audioMime = (msg.message.audioMessage.mimetype || 'audio/ogg').split(';')[0];
+          userTextRaw = await geminiService.transcribeAudio(audioBuffer, audioMime);
+        } catch (audioError) {
+          console.error('Erro ao processar audio:', audioError.message);
+        }
+        if (!userTextRaw) {
+          await sock.sendMessage(customerNumber, {
+            text: 'Nao consegui ouvir bem o seu audio. Pode repetir ou escrever a sua mensagem? / I could not hear your audio clearly. Could you repeat it or type your message?',
+          });
+          return;
+        }
       }
 
       if (!userTextRaw) {
