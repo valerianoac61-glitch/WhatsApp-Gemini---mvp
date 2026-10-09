@@ -102,7 +102,28 @@ async function startBot() {
 
       const wantsHumanTransfer = aiResponse.includes('[HUMAN_TRANSFER]');
       const wantsLeadCapture = aiResponse.includes('[LEAD_CAPTURE]');
+      const imageNames = [];
+      const sendImages = async () => {
+        const knowledge = require('./knowledge/companyKnowledge.json');
+        for (const wanted of imageNames) {
+          const w = wanted.toLowerCase();
+          const product = (knowledge.productsAndServices || []).find((p) => {
+            const n = String(p.name).toLowerCase();
+            return p.image && (n.includes(w) || w.includes(n));
+          });
+          if (product) {
+            await sock.sendMessage(customerNumber, {
+              image: { url: product.image },
+              caption: product.name + ' - ' + product.price,
+            });
+          }
+        }
+      };
       let cleanResponse = aiResponse
+        .replace(/\[SEND_IMAGE:([^\]]+)\]/g, (m, name) => {
+          imageNames.push(name.trim());
+          return '';
+        })
         .replace('[HUMAN_TRANSFER]', '')
         .replace('[LEAD_CAPTURE]', '')
         .trim();
@@ -120,6 +141,7 @@ async function startBot() {
 
         await googleSheetsService.saveLead(customerNumber, `Solicitou suporte humano na mensagem: "${userText}"`);
         await sock.sendMessage(customerNumber, { text: cleanResponse });
+        await sendImages();
         return;
       }
 
@@ -131,6 +153,7 @@ async function startBot() {
       conversationRepository.addMessage(customerNumber, { role: 'model', text: cleanResponse });
 
       await sock.sendMessage(customerNumber, { text: cleanResponse });
+        await sendImages();
     } catch (error) {
       console.error('Erro durante o processamento da mensagem:', error.message);
     }

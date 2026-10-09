@@ -1,38 +1,48 @@
 {
-  "companyName": "TechVanguard Solucoes Digitais",
-  "description": "Consultoria e desenvolvimento de software especializado em IA e automacao de processos para medias e grandes empresas.",
-  "location": "Avenida Paulista, 1000, Bela Vista, Sao Paulo - SP, CEP 01310-100",
-  "businessHours": "Segunda a Sexta-feira, das 09:00 as 18:00. Nao funcionamos aos finais de semana.",
+  "companyName": "Don_fragrance",
+  "description": "Loja de perfumes importados originais para homem.",
+  "location": "Talatona, Luanda (endereco ficticio para demo)",
+  "businessHours": "Segunda a sabado, das 09:00 as 19:00",
   "contacts": {
-    "email": "contato@techvanguard.com.br",
-    "whatsappHuman": "+5511999998888"
+    "email": "contato@donfragrance.com",
+    "whatsappHuman": "+244900000000"
   },
   "productsAndServices": [
     {
-      "name": "Desenvolvimento de Chatbots Avancados",
-      "price": "A partir de R$ 5.000,00 setup fixo + mensalidade adaptavel",
-      "description": "Criacao de agentes virtuais inteligentes integrados com LLMs e sistemas internos."
+      "name": "Dolce & Gabbana The Only One",
+      "price": "45.000 Kz",
+      "description": "Eau de parfum masculino 100 ml. Fragrancia marcante e sofisticada, com notas de baunilha, castanha e madeira, e fresco urbano. Transmite forca, confianca e atitude. Fixacao intensa e duradoura.",
+      "image": "https://i.imgur.com/5oo4npf.jpeg"
     },
     {
-      "name": "Consultoria de Arquitetura Cloud e IA",
-      "price": "R$ 350,00 por hora de mentoria/trabalho",
-      "description": "Analise de infraestrutura e desenho de solucoes escalaveis em nuvem."
+      "name": "Emporio Armani Stronger With You",
+      "price": "45.000 Kz",
+      "description": "Eau de parfum masculino 100 ml. Intenso, moderno e inesquecivel. Amadeirado e especiado, para ocasioes especiais. Contraste entre elegancia e rebeldia. Fixacao intensa e duradoura.",
+      "image": "https://i.imgur.com/EzHKf1i.jpeg"
+    },
+    {
+      "name": "Carolina Herrera 212 Men NYC",
+      "price": "45.000 Kz",
+      "description": "Eau de parfum masculino 100 ml. Intenso, moderno e inesquecivel. Amadeirado e especiado, para ocasioes especiais. Contraste entre elegancia e rebeldia. Fixacao intensa e duradoura.",
+      "image": "https://i.imgur.com/emtSWhL.jpeg"
     }
   ],
   "faq": [
     {
-      "question": "Qual o prazo medio de entrega de um chatbot?",
-      "answer": "O prazo medio para um MVP funcional e homologado varia entre 15 a 30 dias uteis."
+      "question": "Como posso pagar?",
+      "answer": "Aceitamos Multicaixa Express e transferencia por IBAN. Depois de escolher o perfume e a forma de pagamento, um atendente humano finaliza o pedido consigo."
     },
     {
-      "question": "Voces emitem nota fiscal?",
-      "answer": "Sim, emitimos nota fiscal de prestacao de servicos para todas as contas corporativas."
+      "question": "Voces fazem entrega?",
+      "answer": "Sim, entregamos em Luanda. O prazo e a taxa sao combinados com o atendente."
+    },
+    {
+      "question": "Os perfumes sao originais?",
+      "answer": "Sim, trabalhamos com perfumes importados originais."
+    },
+    {
+      "question": "Qual o horario de atendimento?",
+      "answer": "De segunda a sabado, das 09:00 as 19:00."
     }
-  ],
-  "policies": {
-    "guarantee": "Oferecemos 90 dias de suporte e garantia tecnica integral contra bugs apos a implantacao do sistema em ambiente producao."
-  },
-  "rules": {
-    "humanEscalationTrigger": "Sempre que o usuario solicitar falar com um atendente, humano, suporte tecnico complexo, ou se demonstrar forte descontentamento."
-  }
+  ]
 }
