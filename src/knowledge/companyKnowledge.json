@@ -1,48 +1,57 @@
 {
-  "companyName": "Don_fragrance",
-  "description": "Loja de perfumes importados originais para homem.",
-  "location": "Talatona, Luanda (endereco ficticio para demo)",
-  "businessHours": "Segunda a sabado, das 09:00 as 19:00",
+  "companyName": "Carlitos Financa Fitness",
+  "description": "Loja de material para exercicios fisicos: equipamentos de ginasio e fitness.",
+  "location": "Vila de Viana, em direcao a Casa da Juventude, junto ao Banco BIC",
+  "businessHours": "Segunda a sabado, das 08:00 as 18:00",
   "contacts": {
-    "email": "contato@donfragrance.com",
-    "whatsappHuman": "+244900000000"
+    "email": "nao disponivel (contacto por WhatsApp ou Instagram @carlitosfinancafitness)",
+    "whatsappHuman": "+244934374877"
   },
   "productsAndServices": [
     {
-      "name": "Dolce & Gabbana The Only One",
-      "price": "45.000 Kz",
-      "description": "Eau de parfum masculino 100 ml. Fragrancia marcante e sofisticada, com notas de baunilha, castanha e madeira, e fresco urbano. Transmite forca, confianca e atitude. Fixacao intensa e duradoura.",
-      "image": "https://i.imgur.com/5oo4npf.jpeg"
+      "name": "Tapete para Ginasio",
+      "price": "35.000 Kz por unidade",
+      "description": "Tapete de borracha para ginasio, 1 m2, espessura de 1,5 cm. Preco por unidade.",
+      "image": "https://i.imgur.com/laUy9VI.jpeg"
     },
     {
-      "name": "Emporio Armani Stronger With You",
-      "price": "45.000 Kz",
-      "description": "Eau de parfum masculino 100 ml. Intenso, moderno e inesquecivel. Amadeirado e especiado, para ocasioes especiais. Contraste entre elegancia e rebeldia. Fixacao intensa e duradoura.",
-      "image": "https://i.imgur.com/EzHKf1i.jpeg"
+      "name": "Esteira Eletrica",
+      "price": "410.000 Kz (preco especial)",
+      "description": "Esteira eletrica dobravel e pratica, com motor potente, velocidade ajustavel, inclinacao ajustavel e monitor digital. Qualidade garantida. Tem entrega ao domicilio, garantia e assistencia, e pagamento facilitado.",
+      "image": "https://i.imgur.com/qdDAxLi.jpeg"
     },
     {
-      "name": "Carolina Herrera 212 Men NYC",
-      "price": "45.000 Kz",
-      "description": "Eau de parfum masculino 100 ml. Intenso, moderno e inesquecivel. Amadeirado e especiado, para ocasioes especiais. Contraste entre elegancia e rebeldia. Fixacao intensa e duradoura.",
-      "image": "https://i.imgur.com/emtSWhL.jpeg"
+      "name": "Banco de Exercicio",
+      "price": "108.000 Kz",
+      "description": "Banco de exercicio para treino em casa ou no ginasio, com elasticos de resistencia.",
+      "image": "https://i.imgur.com/vh3u86O.jpeg"
     }
   ],
   "faq": [
     {
-      "question": "Como posso pagar?",
-      "answer": "Aceitamos Multicaixa Express e transferencia por IBAN. Depois de escolher o perfume e a forma de pagamento, um atendente humano finaliza o pedido consigo."
-    },
-    {
       "question": "Voces fazem entrega?",
-      "answer": "Sim, entregamos em Luanda. O prazo e a taxa sao combinados com o atendente."
+      "answer": "Sim, temos entrega ao domicilio. O prazo e a taxa sao combinados com o atendente."
     },
     {
-      "question": "Os perfumes sao originais?",
-      "answer": "Sim, trabalhamos com perfumes importados originais."
+      "question": "Como posso pagar?",
+      "answer": "Temos pagamento facilitado. Um atendente humano combina a forma de pagamento consigo e finaliza o pedido."
+    },
+    {
+      "question": "Onde fica a loja?",
+      "answer": "Estamos na Vila de Viana, em direcao a Casa da Juventude, junto ao Banco BIC."
     },
     {
       "question": "Qual o horario de atendimento?",
-      "answer": "De segunda a sabado, das 09:00 as 19:00."
+      "answer": "De segunda a sabado, das 08:00 as 18:00."
+    },
+    {
+      "question": "Qual o contacto da loja?",
+      "answer": "Pode falar connosco pelo WhatsApp 934 374 877 ou 954 427 015, ou pelo Instagram @carlitosfinancafitness."
     }
-  ]
+  ],
+  "policies": {
+    "entrega": "Entrega ao domicilio disponivel. Prazo e taxa combinados com o atendente.",
+    "garantia": "A esteira eletrica tem garantia e assistencia.",
+    "pagamento": "Pagamento facilitado, combinado com o atendente humano."
+  }
 }
