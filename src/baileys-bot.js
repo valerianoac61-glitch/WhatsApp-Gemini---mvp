@@ -91,22 +91,6 @@ async function startBot() {
       }
 
       const userText = userTextRaw.trim();
-      const dbg = userText.toLowerCase().match(/^fotosdebug\s*(\d+)?$/);
-      if (dbg) {
-        const page = parseInt(dbg[1] || '1', 10);
-        const all = require('./knowledge/companyKnowledge.json').productsAndServices || [];
-        const slice = all.slice((page - 1) * 8, page * 8);
-        for (let i = 0; i < slice.length; i++) {
-          const p = slice[i];
-          const code = String(p.image || '').split('/').pop();
-          const num = (page - 1) * 8 + i + 1;
-          if (p.image) {
-            await sock.sendMessage(customerNumber, { image: { url: p.image }, caption: num + '. ' + p.name + ' [' + code + ']' });
-          }
-        }
-        await sock.sendMessage(customerNumber, { text: 'Pagina ' + page + ' de ' + Math.ceil(all.length / 8) });
-        return;
-      }
       if (userText.toLowerCase() === 'reiniciar') {
         conversationRepository.setStatus(customerNumber, 'AI_ACTIVE');
         await sock.sendMessage(customerNumber, { text: 'Conversa reiniciada. Como posso ajudar?' });
