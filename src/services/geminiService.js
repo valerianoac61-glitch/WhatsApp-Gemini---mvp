@@ -4,6 +4,29 @@ const { systemPrompt } = require('../prompts/systemPrompt');
 
 const ai = new GoogleGenAI({ apiKey: env.gemini.apiKey });
 
+const geracaoOriginal = ai.models.generateContent.bind(ai.models);
+const temporario = (err) => /503|UNAVAILABLE|429|RESOURCE_EXHAUSTED|overloaded|high demand/i.test(String((err && err.message) || err));
+ai.models.generateContent = async (params) => {
+  const esperas = [1500, 3500, 7000];
+  for (let i = 0; ; i++) {
+    try {
+      return await geracaoOriginal(params);
+    } catch (err) {
+      if (!temporario(err)) throw err;
+      if (i >= esperas.length) {
+        const reserva = process.env.GEMINI_FALLBACK_MODEL;
+        if (reserva && params.model !== reserva) {
+          console.log('Gemini indisponivel, usando modelo reserva: ' + reserva);
+          return await geracaoOriginal({ ...params, model: reserva });
+        }
+        throw err;
+      }
+      console.log('Gemini indisponivel, tentando de novo (' + (i + 1) + '/' + esperas.length + ')');
+      await new Promise((r) => setTimeout(r, esperas[i]));
+    }
+  }
+};
+
 class GeminiService {
   static async generateResponse(userMessage, conversationHistory) {
     const formattedContents = conversationHistory.map((msg) => ({
