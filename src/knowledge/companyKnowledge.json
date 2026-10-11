@@ -1,57 +1,279 @@
 {
   "companyName": "Carlitos Financa Fitness",
-  "description": "Loja de material para exercicios fisicos: equipamentos de ginasio e fitness.",
-  "location": "Vila de Viana, em direcao a Casa da Juventude, junto ao Banco BIC",
-  "businessHours": "Segunda a sabado, das 08:00 as 18:00",
+  "description": "Loja de material para exercicios fisicos e fitness: equipamentos de ginasio, musculacao, cardio, acessorios e roupa fitness.",
+  "location": "Vila de Viana, depois do Banco BIC, dentro da feira da Vila de Viana (em direcao a Casa da Juventude)",
+  "businessHours": "Segunda a sabado, das 08:00 as 17:30",
   "contacts": {
-    "email": "nao disponivel (contacto por WhatsApp ou Instagram @carlitosfinancafitness)",
-    "whatsappHuman": "+244934374877"
+    "email": "nao disponivel. Linha de apoio: 934 374 877. Instagram: @carlitosfinancafitness",
+    "whatsappHuman": "+244954427015"
   },
   "productsAndServices": [
     {
       "name": "Tapete para Ginasio",
       "price": "35.000 Kz por unidade",
-      "description": "Tapete de borracha para ginasio, 1 m2, espessura de 1,5 cm. Preco por unidade.",
+      "description": "Tapete para ginasio, 1 m2, espessura de 1,5 cm. Preco por unidade.",
       "image": "https://i.imgur.com/laUy9VI.jpeg"
     },
     {
       "name": "Esteira Eletrica",
       "price": "410.000 Kz (preco especial)",
-      "description": "Esteira eletrica dobravel e pratica, com motor potente, velocidade ajustavel, inclinacao ajustavel e monitor digital. Qualidade garantida. Tem entrega ao domicilio, garantia e assistencia, e pagamento facilitado.",
+      "description": "Esteira eletrica dobravel, motor potente, velocidade e inclinacao ajustaveis, monitor digital. Tem entrega ao domicilio, garantia e assistencia, e pagamento facilitado.",
       "image": "https://i.imgur.com/qdDAxLi.jpeg"
     },
     {
       "name": "Banco de Exercicio",
       "price": "108.000 Kz",
-      "description": "Banco de exercicio para treino em casa ou no ginasio, com elasticos de resistencia.",
+      "description": "Banco de exercicio com elasticos de resistencia.",
       "image": "https://i.imgur.com/vh3u86O.jpeg"
+    },
+    {
+      "name": "Cinta de Musculacao",
+      "price": "25.000 Kz",
+      "description": "Cinta de musculacao em couro, modelo Super.",
+      "image": "https://i.imgur.com/KoLHlve.jpeg"
+    },
+    {
+      "name": "Bicicleta Fitness",
+      "price": "140.000 Kz",
+      "description": "Bicicleta fitness com monitor, ideal para treino em casa ou na academia. Fortalece o corpo e queima calorias.",
+      "image": "https://i.imgur.com/NWezpep.jpeg"
+    },
+    {
+      "name": "Pedal de Exercicio",
+      "price": "60.000 Kz",
+      "description": "Pedal de exercicio dobravel com display multifuncao. Treino de baixo impacto, fortalece pernas e bracos. Dimensoes 22 x 16 x 31 cm.",
+      "image": "https://i.imgur.com/fwYWQ33.jpeg"
+    },
+    {
+      "name": "Roda Abdominal",
+      "price": "8.000 Kz",
+      "description": "Roda abdominal para treino de abdominais.",
+      "image": "https://i.imgur.com/C0H8xzH.jpeg"
+    },
+    {
+      "name": "Hand Grip Antebraco",
+      "price": "3.000 Kz",
+      "description": "Hand grip para treino de antebraco e forca das maos.",
+      "image": "https://i.imgur.com/3mJCWZ4.jpeg"
+    },
+    {
+      "name": "Saco de Pancada de Box",
+      "price": "35.000 Kz",
+      "description": "Saco de pancada de box com corrente e acessorios de fixacao.",
+      "image": "https://i.imgur.com/xcbXKjd.jpeg"
+    },
+    {
+      "name": "Alter Multifuncional 30kg com Kettlebell",
+      "price": "69.000 Kz",
+      "description": "Kit de alter multifuncional de 30 kg com halteres, barra e kettlebell. Modelo Super.",
+      "image": "https://i.imgur.com/zdQzFRy.jpeg"
+    },
+    {
+      "name": "Amparador de Box Venum",
+      "price": "20.000 Kz",
+      "description": "Par de amparadores de box da marca Venum.",
+      "image": "https://i.imgur.com/pqlXV1N.jpeg"
+    },
+    {
+      "name": "Cola Fitness",
+      "price": "9.000 Kz",
+      "description": "Cola fitness para treino, disponivel em varias cores.",
+      "image": "https://i.imgur.com/HRTBErP.jpeg"
+    },
+    {
+      "name": "Bicicleta Ergometrica Promocao",
+      "price": "185.000 Kz (promocao)",
+      "description": "Bicicleta ergometrica modelo Super, em promocao.",
+      "image": "https://i.imgur.com/uyjm6Y7.jpeg"
+    },
+    {
+      "name": "Bicicleta Elipica",
+      "price": "480.000 Kz",
+      "description": "Bicicleta elipica com display. Modelo Super.",
+      "image": "https://i.imgur.com/wTi9Z2D.jpeg"
+    },
+    {
+      "name": "Alter de 8kg",
+      "price": "17.000 Kz",
+      "description": "Alter de 8 kg. Modelo Super.",
+      "image": "https://i.imgur.com/4b9oaP6.jpeg"
+    },
+    {
+      "name": "Trampolim Fitness Azul",
+      "price": "55.000 Kz",
+      "description": "Trampolim fitness azul, sem barra de apoio.",
+      "image": "https://i.imgur.com/g2hFCPN.jpeg"
+    },
+    {
+      "name": "Cama Multi Funcoes",
+      "price": "115.000 Kz",
+      "description": "Cama multi funcoes para treino, altura ajustavel ate 87 cm e comprimento de 132 cm. Modelo Super.",
+      "image": "https://i.imgur.com/TuoCMZl.jpeg"
+    },
+    {
+      "name": "Maquina Multifuncional Entrega Gratuita",
+      "price": "550.000 Kz",
+      "description": "Maquina multifuncional modelo Super, com entrega gratuita.",
+      "image": "https://i.imgur.com/hOpqdwr.jpeg"
+    },
+    {
+      "name": "Luvas para Treino Fitness",
+      "price": "6.000 Kz",
+      "description": "Luvas para treino fitness com protecao de pulso, pretas com detalhes vermelhos.",
+      "image": "https://i.imgur.com/096CwcO.jpeg"
+    },
+    {
+      "name": "Alter de 2kg Coberto",
+      "price": "13.000 Kz",
+      "description": "Alter coberto de 2 kg.",
+      "image": "https://i.imgur.com/XZPM91l.jpeg"
+    },
+    {
+      "name": "Pasta para Telefone",
+      "price": "5.000 Kz",
+      "description": "Pasta para telefone, para treino. Compre 3 e ganhe 5% de desconto.",
+      "image": "https://i.imgur.com/BFWpC4L.jpeg"
+    },
+    {
+      "name": "Manguitos para Academia",
+      "price": "a partir de 38.950 Kz",
+      "description": "Manguitos para academia. Precos: 10kg 38.950 Kz, 15kg 51.950 Kz, 20kg 68.950 Kz, 25kg 81.950 Kz, 30kg 94.950 Kz, 35kg 110.000 Kz.",
+      "image": "https://i.imgur.com/TRNXrLq.jpeg"
+    },
+    {
+      "name": "Mini Steep",
+      "price": "60.000 Kz",
+      "description": "Mini steep com elasticos e display. Modelo Super.",
+      "image": "https://i.imgur.com/GxmjGhT.jpeg"
+    },
+    {
+      "name": "Pivo Abdominal",
+      "price": "10.000 Kz",
+      "description": "Pivo abdominal com ventosa para treino de abdominais. Modelo Super.",
+      "image": "https://i.imgur.com/1alCgQY.jpeg"
+    },
+    {
+      "name": "Bicicleta Ergometrica com Garrafa",
+      "price": "210.000 Kz",
+      "description": "Bicicleta ergometrica modelo Super, altura ajustavel ate 87 cm e comprimento de 132 cm.",
+      "image": "https://i.imgur.com/x46DozW.jpeg"
+    },
+    {
+      "name": "Trampolim Fitness com Barra",
+      "price": "105.000 Kz",
+      "description": "Trampolim fitness com barra de apoio. Modelo Super.",
+      "image": "https://i.imgur.com/AnXoe1x.jpeg"
+    },
+    {
+      "name": "Paralela Movel",
+      "price": "150.000 Kz",
+      "description": "Paralela movel para treino de peso corporal. Modelo Super.",
+      "image": "https://i.imgur.com/PgR8ydl.jpeg"
+    },
+    {
+      "name": "Table de Pilates",
+      "price": "55.000 Kz",
+      "description": "Table de pilates com punhos. Modelo Super.",
+      "image": "https://i.imgur.com/ehJJNYY.jpeg"
+    },
+    {
+      "name": "Maquina Multifuncional Simples",
+      "price": "370.000 Kz",
+      "description": "Maquina multifuncional de musculacao.",
+      "image": "https://i.imgur.com/2RRgvz2.jpeg"
+    },
+    {
+      "name": "Par de Luva Fitness",
+      "price": "8.000 Kz",
+      "description": "Par de luvas fitness vermelhas e pretas com protecao de pulso.",
+      "image": "https://i.imgur.com/vb1kWFP.jpeg"
+    },
+    {
+      "name": "Luvas para Treino Tatico",
+      "price": "6.000 Kz",
+      "description": "Luvas para treino modelo tatico, meio-dedo, em 3 cores. Modelo Super.",
+      "image": "https://i.imgur.com/a0LNEIa.jpeg"
+    },
+    {
+      "name": "Corda para Saltar",
+      "price": "5.000 Kz",
+      "description": "Corda para saltar, disponivel em varias cores.",
+      "image": "https://i.imgur.com/4qQNciB.jpeg"
+    },
+    {
+      "name": "Alter Multifuncional 30kg Simples",
+      "price": "55.000 Kz",
+      "description": "Alter multifuncional de 30 kg com halteres e barra. Modelo Super.",
+      "image": "https://i.imgur.com/2UWC9y0.jpeg"
+    },
+    {
+      "name": "Colchao Enflavel Solteiro",
+      "price": "59.000 Kz",
+      "description": "Colchao enflavel solteiro eletrico. Modelo Super.",
+      "image": "https://i.imgur.com/yVMBo3w.jpeg"
+    },
+    {
+      "name": "Alter 50kg Kit Prata",
+      "price": "150.000 Kz",
+      "description": "Kit prata de 50 kg com barra, halteres e anilhas, em maleta. Modelo Super.",
+      "image": "https://i.imgur.com/2YlBXqn.jpeg"
+    },
+    {
+      "name": "Colchao Enflavel com Bomba",
+      "price": "79.500 Kz",
+      "description": "Colchao enflavel maior, com bomba de 4000 mAh, almofadas e acessorios. Modelo Super.",
+      "image": "https://i.imgur.com/S1tzo3J.jpeg"
+    },
+    {
+      "name": "Tapete Yoga Fitness",
+      "price": "13.000 Kz",
+      "description": "Tapete de yoga e fitness, disponivel em varias cores. Modelo Super.",
+      "image": "https://i.imgur.com/IxJPSGq.jpeg"
+    },
+    {
+      "name": "Cinta Vibradora",
+      "price": "18.000 Kz",
+      "description": "Cinta vibradora Vibroaction. Modelo Super.",
+      "image": "https://i.imgur.com/21t3HJu.jpeg"
+    },
+    {
+      "name": "Fita de Resistencia",
+      "price": "5.000 Kz",
+      "description": "Fitas de resistencia elasticas, conjunto de 5 cores. Modelo Super.",
+      "image": "https://i.imgur.com/1AkNKGy.jpeg"
+    },
+    {
+      "name": "Fita de Resistencia Pano",
+      "price": "7.000 Kz",
+      "description": "Fitas de resistencia em pano para quadris e pernas. Modelo Super.",
+      "image": "https://i.imgur.com/ejVzwbV.jpeg"
     }
   ],
   "faq": [
     {
-      "question": "Voces fazem entrega?",
-      "answer": "Sim, temos entrega ao domicilio. O prazo e a taxa sao combinados com o atendente."
+      "question": "Como posso pagar?",
+      "answer": "Aceitamos transferencia bancaria (mesmo banco), transferencia Express ou dinheiro em mao. O pagamento e feito apos receber o produto. Os nossos bancos sao BAI, BFA e Atlantico."
     },
     {
-      "question": "Como posso pagar?",
-      "answer": "Temos pagamento facilitado. Um atendente humano combina a forma de pagamento consigo e finaliza o pedido."
+      "question": "Voces fazem entrega?",
+      "answer": "Sim, fazemos entregas. O prazo e a taxa sao combinados com o atendente. A maquina multifuncional de 550.000 Kz tem entrega gratuita."
     },
     {
       "question": "Onde fica a loja?",
-      "answer": "Estamos na Vila de Viana, em direcao a Casa da Juventude, junto ao Banco BIC."
+      "answer": "Estamos na Vila de Viana, depois do Banco BIC, dentro da feira da Vila de Viana."
     },
     {
       "question": "Qual o horario de atendimento?",
-      "answer": "De segunda a sabado, das 08:00 as 18:00."
+      "answer": "De segunda a sabado, das 08:00 as 17:30."
     },
     {
       "question": "Qual o contacto da loja?",
-      "answer": "Pode falar connosco pelo WhatsApp 934 374 877 ou 954 427 015, ou pelo Instagram @carlitosfinancafitness."
+      "answer": "WhatsApp 954 427 015 e linha de apoio 934 374 877."
     }
   ],
   "policies": {
-    "entrega": "Entrega ao domicilio disponivel. Prazo e taxa combinados com o atendente.",
-    "garantia": "A esteira eletrica tem garantia e assistencia.",
-    "pagamento": "Pagamento facilitado, combinado com o atendente humano."
+    "pagamento": "Transferencia bancaria (mesmo banco), transferencia Express ou dinheiro em mao. Pagamento feito apos receber o produto. Bancos: BAI, BFA e Atlantico.",
+    "entrega": "Entrega disponivel, combinada com o atendente. Maquina multifuncional de 550.000 Kz com entrega gratuita.",
+    "garantia": "A esteira eletrica tem garantia e assistencia."
   }
 }

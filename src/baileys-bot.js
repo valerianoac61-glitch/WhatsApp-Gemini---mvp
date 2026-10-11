@@ -122,9 +122,11 @@ async function startBot() {
       const sendImages = async () => {
         const knowledge = require('./knowledge/companyKnowledge.json');
         for (const wanted of imageNames) {
-          const w = wanted.toLowerCase();
-          const product = (knowledge.productsAndServices || []).find((p) => {
-            const n = String(p.name).toLowerCase();
+          const norm = (t) => String(t).toLowerCase().normalize('NFD').replace(/[^a-z0-9 ]/g, '').trim();
+          const w = norm(wanted);
+          const exact = (knowledge.productsAndServices || []).find((p) => p.image && norm(p.name) === w);
+          const product = exact || (knowledge.productsAndServices || []).find((p) => {
+            const n = norm(p.name);
             return p.image && (n.includes(w) || w.includes(n));
           });
           if (product) {
