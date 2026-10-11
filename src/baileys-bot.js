@@ -15,7 +15,7 @@ const GENERIC_FAILURE_MESSAGE =
 let pairingCodeRequested = false;
 
 async function startBot() {
-  const { state, saveCreds } = await useMultiFileAuthState('baileys_auth');
+  const { state, saveCreds } = await useMultiFileAuthState(process.env.AUTH_DIR || 'baileys_auth');
 
   const sock = makeWASocket({
     auth: state,
@@ -24,7 +24,7 @@ async function startBot() {
   if (!sock.authState.creds.registered && !pairingCodeRequested) {
     pairingCodeRequested = true;
     setTimeout(async () => {
-      const code = await sock.requestPairingCode("244930666194");
+      const code = await sock.requestPairingCode(process.env.PAIRING_NUMBER || "244930666194");
       console.log("CODIGO DE PAREAMENTO: " + code);
     }, 3000);
   }
