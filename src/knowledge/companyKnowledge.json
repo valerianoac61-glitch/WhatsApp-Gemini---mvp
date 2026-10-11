@@ -29,7 +29,8 @@
     {
       "name": "Cinta de Musculacao",
       "price": "25.000 Kz",
-      "description": "Cinta de musculacao em couro, modelo Super."
+      "description": "Cinta de musculacao em couro, modelo Super.",
+      "image": "https://i.imgur.com/N7cF32g.jpeg"
     },
     {
       "name": "Bicicleta Fitness",
@@ -220,27 +221,32 @@
     {
       "name": "Colchao Enflavel com Bomba",
       "price": "79.500 Kz",
-      "description": "Colchao enflavel maior, com bomba de 4000 mAh, almofadas e acessorios. Modelo Super."
+      "description": "Colchao enflavel maior, com bomba de 4000 mAh, almofadas e acessorios. Modelo Super.",
+      "image": "https://i.imgur.com/L2g14fr.jpeg"
     },
     {
       "name": "Tapete Yoga Fitness",
       "price": "13.000 Kz",
-      "description": "Tapete de yoga e fitness, disponivel em varias cores. Modelo Super."
+      "description": "Tapete de yoga e fitness, disponivel em varias cores. Modelo Super.",
+      "image": "https://i.imgur.com/ixJKPId.jpeg"
     },
     {
       "name": "Cinta Vibradora",
       "price": "18.000 Kz",
-      "description": "Cinta vibradora Vibroaction. Modelo Super."
+      "description": "Cinta vibradora Vibroaction. Modelo Super.",
+      "image": "https://i.imgur.com/QbBze9y.jpeg"
     },
     {
       "name": "Fita de Resistencia",
       "price": "5.000 Kz",
-      "description": "Fitas de resistencia elasticas, conjunto de 5 cores. Modelo Super."
+      "description": "Fitas de resistencia elasticas, conjunto de 5 cores. Modelo Super.",
+      "image": "https://i.imgur.com/cf58I9Y.jpeg"
     },
     {
       "name": "Fita de Resistencia Pano",
       "price": "7.000 Kz",
-      "description": "Fitas de resistencia em pano para quadris e pernas. Modelo Super."
+      "description": "Fitas de resistencia em pano para quadris e pernas. Modelo Super.",
+      "image": "https://i.imgur.com/fgWiZf0.jpeg"
     },
     {
       "name": "Luva de Treino",
