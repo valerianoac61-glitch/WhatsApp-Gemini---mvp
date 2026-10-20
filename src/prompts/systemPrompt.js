@@ -1,4 +1,4 @@
-const knowledge = require('../knowledge/companyKnowledge.json');
+const knowledge = require('../knowledge/' + (process.env.KNOWLEDGE_FILE || 'companyKnowledge.json'));
 
 const systemPrompt = `
 Voce e o atendente virtual especialista da empresa ${knowledge.companyName}.

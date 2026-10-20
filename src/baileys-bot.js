@@ -120,7 +120,7 @@ async function startBot() {
       const wantsLeadCapture = aiResponse.includes('[LEAD_CAPTURE]');
       const imageNames = [];
       const sendImages = async () => {
-        const knowledge = require('./knowledge/companyKnowledge.json');
+        const knowledge = require('./knowledge/' + (process.env.KNOWLEDGE_FILE || 'companyKnowledge.json'));
         for (const wanted of imageNames) {
           const norm = (t) => String(t).toLowerCase().normalize('NFD').replace(/[^a-z0-9 ]/g, '').trim();
           const w = norm(wanted);

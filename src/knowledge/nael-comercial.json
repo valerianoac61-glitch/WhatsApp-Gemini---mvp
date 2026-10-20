@@ -1,0 +1,29 @@
+{
+  "companyName": "Nael Comercial",
+  "description": "Loja de material de exercicio fisico em Luanda.",
+  "location": "Luanda/Viana, perto da Pedonal do Piaget",
+  "businessHours": "Segunda a sabado, das 08:00 as 18:00",
+  "contacts": {
+    "email": "nao disponivel. Contacto por WhatsApp.",
+    "whatsappHuman": "+244956954487"
+  },
+  "productsAndServices": [
+    {
+      "name": "Roda Abdominal Dupla com Elasticos",
+      "price": "15.000 Kz (grande promocao)",
+      "description": "Roda para definir a musculacao, para homens e mulheres. Ajuda a trancar a barriga e deixa o abdomen forte e saudavel. Tem varios modos de fazer exercicios e da um novo visual ao fisico.",
+      "image": "https://i.imgur.com/LH8jh5P.jpeg"
+    }
+  ],
+  "faq": [
+    { "question": "Voces fazem entrega?", "answer": "Sim, fazemos entregas ao domicilio em toda parte de Luanda." },
+    { "question": "Onde fica a loja?", "answer": "Estamos em Luanda/Viana, perto da Pedonal do Piaget." },
+    { "question": "Como posso pagar?", "answer": "A forma de pagamento e combinada com o atendente, que finaliza o pedido consigo." },
+    { "question": "Qual o horario de atendimento?", "answer": "De segunda a sabado, das 08:00 as 18:00." },
+    { "question": "Qual o contacto da loja?", "answer": "WhatsApp +244 956 954 487." }
+  ],
+  "policies": {
+    "entrega": "Entrega ao domicilio em toda parte de Luanda.",
+    "pagamento": "Combinado com o atendente humano."
+  }
+}
